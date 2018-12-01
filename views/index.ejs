@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form name="f1" action="/pay" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_cizPfJC3o9jWPVqSPhs8adQU"
+                data-amount="999"
+                data-name="Demo Site"
+                data-description="Widget"
+                data-image="dog.jpg"
+                data-locale="auto"
+            ></script>
+
+            <script>
+                document.getElementsByClassName(
+                    "stripe-button-el"
+                )[0].style.display = "none";
+                document.getElementsByClassName("stripe-button-el")[0].click();
+            </script>
+        </form>
+    </body>
+</html>
